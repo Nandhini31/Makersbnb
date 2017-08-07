@@ -3,6 +3,7 @@ ruby '2.4.0'
 
 group :development do
   gem 'bcrypt'
+  gem 'capybara'
   gem 'data_mapper'
   gem 'database_cleaner'
   gem 'dm-postgres-adapter'
