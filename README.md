@@ -39,3 +39,33 @@ Spec : Any signed in user can list a new space
 - As a user of Makersbnb
   once a listing has been booked
   I should be able to update the available dates for my listing
+
+  ### MVP
+  - As a user of Makersbnb
+    so that I use Makersbnb
+    I can sign up to Makersbnb
+
+  -  As a user of Makersbnb
+    so that I login as myself
+    I can log-in to Makersbnb
+
+  - As a user of Makersbnb
+    so that I can host a guest
+    I can list a space in Makersbnb
+
+  ### Tech Stack
+
+      - HTML/CSS
+      - Ruby
+      - Sinatra
+      - PostgreSQL
+      - Testing
+      - RSpec
+      - Capybara
+
+  ### Contributors
+
+      - Michael Brown
+      - Oleg
+      - Funmi
+      - Nandhini
