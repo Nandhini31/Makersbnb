@@ -5,7 +5,12 @@
 <body>
 
 <ul id="listings">
-  <li>Nice and charming place</li>
+  <% @listings.each do |listing| %>
+  <li>
+  <p><%= listing.title %></p>
+  <p><%= listing.description %></p>
+  </li>
+  <% end %>
 </ul>
 
 </body>
