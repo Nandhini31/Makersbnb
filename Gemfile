@@ -10,6 +10,7 @@ group :development do
   gem 'rake'
   gem 'sinatra'
   gem 'sinatra-flash'
+  # gem 'sinatra-partial'
 end
 
 group :test do
