@@ -6,7 +6,7 @@ feature 'Listings' do
   scenario 'View listings' do
     visit('/listings')
     within 'ul#listings' do
-      expect(page).to have_content(message_body)
+      expect(page).to have_content('Nice and charming place')
     end
   end
 end
