@@ -1,3 +1,6 @@
+
+[!Build Status]https://travis-ci.org/Nandhini31/Makersbnb.svg?branch=master
+
 ### Description
 An Airbnb clone
 
