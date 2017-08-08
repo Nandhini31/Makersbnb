@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com -->
-<!--  Last Published: Tue Aug 08 2017 14:02:01 GMT+0000 (UTC)  -->
+<!--  Last Published: Tue Aug 08 2017 21:15:01 GMT+0000 (UTC)  -->
 <html data-wf-page="5989a4fbd7ec660001c05dc6" data-wf-site="598874739abf440001d32417">
 <head>
   <meta charset="utf-8">
@@ -22,6 +22,13 @@
 </script>
   <link href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+</script>
 </head>
 <body class="body">
   <div class="navbar w-nav" data-animation="default" data-collapse="small" data-duration="400">
@@ -29,7 +36,18 @@
       <a class="w-nav-brand" href="index.html">
         <div class="logo">mbnb</div>
       </a>
-      <nav class="navmenu w-nav-menu" role="navigation"><a class="navlink w-nav-link" href="#">My Places</a><a class="navlink w-nav-link" href="#">My Requests</a><a class="navlink w-nav-link" href="log-in.html">Logout</a></nav>
+      <nav class="navmenu w-nav-menu" role="navigation"><a class="navlink w-nav-link" href="#">My Places</a><a class="navlink w-nav-link" href="#">My Bookings</a>
+        <div class="formmenu w-form">
+          <form action="/logout" data-name="logout" id="wf-form-logout" method="post" name="wf-form-logout">
+            <div class="w-embed"><input type="hidden" name="_method" value="delete"></div><input class="button menu w-button" data-wait="Please wait..." type="submit" value="Logout"></form>
+          <div class="w-form-done">
+            <div>Thank you! Your submission has been received!</div>
+          </div>
+          <div class="w-form-fail">
+            <div>Oops! Something went wrong while submitting the form.</div>
+          </div>
+        </div>
+      </nav>
       <div class="menubutton w-nav-button" data-ix="navbar">
         <div class="hambtop"></div>
         <div class="hambmid"></div>
@@ -39,41 +57,53 @@
   </div>
   <div class="section">
     <div class="containergeneral w-container">
+      <div class="bodycopy">Hello Jack, we ♡ you!</div>
       <div class="h1">Book a place</div>
+      <div class="w-form">
+        <form data-name="Email Form" id="email-form" name="email-form">
+          <div class="w-embed"><input type="text" id="datepicker"></div>
+        </form>
+        <div class="w-form-done">
+          <div>Thank you! Your submission has been received!</div>
+        </div>
+        <div class="w-form-fail">
+          <div>Oops! Something went wrong while submitting the form.</div>
+        </div>
+      </div>
       <div class="listings">
         <div class="listing">
           <div class="listingpicture"><img class="image" src="images/5c81cbc6-d712-4087-8d4a-2e5cbb1f1f11.jpg"></div>
-          <div class="h4">Place title</div>
+          <div class="h4">£37 Place title</div>
           <div class="bodycopy caption">Place description. A couple of lines of text usually.</div>
         </div>
         <div class="listing">
-          <div class="listingpicture"><img class="image" sizes="(max-width: 479px) 98vw, (max-width: 767px) 49vw, (max-width: 991px) 348px, 294.1875px" src="images/f996f772-1aec-4a40-a850-346785d15843.jpg" srcset="images/f996f772-1aec-4a40-a850-346785d15843.jpg 1080w, images/f996f772-1aec-4a40-a850-346785d15843.jpg 1436w"></div>
-          <div class="h4">Place title</div>
-          <div class="bodycopy caption">Place description. A couple of lines of text usually.</div>
-        </div>
-        <div class="listing">
-          <div class="listingpicture"><img class="image" src="images/bd68e087-6372-4b4d-ad7d-7738da5777c4.jpg"></div>
-          <div class="h4">Place title</div>
-          <div class="bodycopy caption">Place description. A couple of lines of text usually.</div>
-        </div>
-        <div class="listing">
-          <div class="listingpicture"><img class="image" sizes="(max-width: 479px) 98vw, (max-width: 767px) 49vw, (max-width: 991px) 348px, 294.1875px" src="images/f996f772-1aec-4a40-a850-346785d15843.jpg" srcset="images/f996f772-1aec-4a40-a850-346785d15843.jpg 1080w, images/f996f772-1aec-4a40-a850-346785d15843.jpg 1436w"></div>
-          <div class="h4">Place title</div>
+          <div class="listingpicture"><img class="image" sizes="(max-width: 479px) 98vw, (max-width: 767px) 49vw, (max-width: 991px) 348px, 294.1875px" src="images/f996f772-1aec-4a40-a850-346785d15843.jpg" srcset="images/f996f772-1aec-4a40-a850-346785d15843-p-1080.jpeg 1080w, images/f996f772-1aec-4a40-a850-346785d15843.jpg 1436w"></div>
+          <div class="h4">£45 Place title</div>
           <div class="bodycopy caption">Place description. A couple of lines of text usually.</div>
         </div>
         <div class="listing">
           <div class="listingpicture"><img class="image" src="images/bd68e087-6372-4b4d-ad7d-7738da5777c4.jpg"></div>
-          <div class="h4">Place title</div>
+          <div class="h4">£44 Place title</div>
           <div class="bodycopy caption">Place description. A couple of lines of text usually.</div>
         </div>
         <div class="listing">
-          <div class="listingpicture"><img class="image" sizes="(max-width: 479px) 98vw, (max-width: 767px) 49vw, (max-width: 991px) 348px, 294.1875px" src="images/f996f772-1aec-4a40-a850-346785d15843.jpg" srcset="images/f996f772-1aec-4a40-a850-346785d15843.jpg 1080w, images/f996f772-1aec-4a40-a850-346785d15843.jpg 1436w"></div>
-          <div class="h4">Place title</div>
+          <div class="listingpicture"><img class="image" sizes="(max-width: 479px) 98vw, (max-width: 767px) 49vw, (max-width: 991px) 348px, 294.1875px" src="images/f996f772-1aec-4a40-a850-346785d15843.jpg" srcset="images/f996f772-1aec-4a40-a850-346785d15843-p-1080.jpeg 1080w, images/f996f772-1aec-4a40-a850-346785d15843.jpg 1436w"></div>
+          <div class="h4">£42 Place title</div>
           <div class="bodycopy caption">Place description. A couple of lines of text usually.</div>
         </div>
         <div class="listing">
-          <div class="listingpicture"><img class="image" sizes="(max-width: 479px) 98vw, (max-width: 767px) 49vw, (max-width: 991px) 348px, 294.1875px" src="images/f996f772-1aec-4a40-a850-346785d15843.jpg" srcset="images/f996f772-1aec-4a40-a850-346785d15843.jpg 1080w, images/f996f772-1aec-4a40-a850-346785d15843.jpg 1436w"></div>
-          <div class="h4">Place title</div>
+          <div class="listingpicture"><img class="image" src="images/bd68e087-6372-4b4d-ad7d-7738da5777c4.jpg"></div>
+          <div class="h4">£50 Place title</div>
+          <div class="bodycopy caption">Place description. A couple of lines of text usually.</div>
+        </div>
+        <div class="listing">
+          <div class="listingpicture"><img class="image" sizes="(max-width: 479px) 98vw, (max-width: 767px) 49vw, (max-width: 991px) 348px, 294.1875px" src="images/f996f772-1aec-4a40-a850-346785d15843.jpg" srcset="images/f996f772-1aec-4a40-a850-346785d15843-p-1080.jpeg 1080w, images/f996f772-1aec-4a40-a850-346785d15843.jpg 1436w"></div>
+          <div class="h4">£45 Place title</div>
+          <div class="bodycopy caption">Place description. A couple of lines of text usually.</div>
+        </div>
+        <div class="listing">
+          <div class="listingpicture"><img class="image" sizes="(max-width: 479px) 98vw, (max-width: 767px) 49vw, (max-width: 991px) 348px, 294.1875px" src="images/f996f772-1aec-4a40-a850-346785d15843.jpg" srcset="images/f996f772-1aec-4a40-a850-346785d15843-p-1080.jpeg 1080w, images/f996f772-1aec-4a40-a850-346785d15843.jpg 1436w"></div>
+          <div class="h4">£45 Place title</div>
           <div class="bodycopy caption">Place description. A couple of lines of text usually.</div>
         </div>
       </div>

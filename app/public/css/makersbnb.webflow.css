@@ -8,8 +8,8 @@
 
 .navlink {
   height: 64px;
-  padding-right: 28px;
-  padding-left: 28px;
+  padding-right: 24px;
+  padding-left: 24px;
   font-size: 16px;
   line-height: 24px;
 }
@@ -60,6 +60,10 @@
   line-height: 24px;
 }
 
+.bodycopy.white {
+  color: #fff;
+}
+
 .h3 {
   margin-top: 16px;
   font-size: 24px;
@@ -70,6 +74,16 @@
   padding-top: 64px;
   padding-bottom: 64px;
   text-align: center;
+}
+
+.section.errors {
+  padding-bottom: 0px;
+  background-color: #e44609;
+}
+
+.section.notices {
+  padding-bottom: 0px;
+  background-color: #fff5ad;
 }
 
 .formblock {
@@ -100,6 +114,13 @@
   border-color: #e44609;
   background-color: #e44609;
   color: #fff;
+}
+
+.button.menu {
+  height: 32px;
+  float: right;
+  font-size: 12px;
+  line-height: 8px;
 }
 
 .footer {
@@ -244,6 +265,27 @@
   font-weight: 700;
 }
 
+.formmenu {
+  padding-left: 24px;
+  float: right;
+}
+
+.ulflash {
+  padding-left: 24px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.ulflash.dark {
+  color: #000;
+}
+
+.liflash {
+  margin-bottom: 16px;
+}
+
 @media (max-width: 991px) {
   .section {
     padding-right: 16px;
@@ -270,10 +312,30 @@
     border-bottom-style: none;
     color: #d8d8d8;
   }
+  .button.menu {
+    height: 64px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    float: none;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .button.menu:hover {
+    border-style: none;
+    background-color: #109e71;
+    color: #d8d8d8;
+  }
   .navmenu {
+    width: 100%;
     padding-top: 16px;
     padding-bottom: 16px;
     background-color: #109e71;
+  }
+  .formmenu {
+    margin-bottom: 0px;
+    padding-left: 0px;
+    float: none;
+    text-align: center;
   }
 }
 
@@ -353,3 +415,4 @@
     flex-basis: 100%;
   }
 }
+

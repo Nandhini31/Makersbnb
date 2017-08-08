@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com -->
 <!--  Last Published: Tue Aug 08 2017 21:15:01 GMT+0000 (UTC)  -->
-<html data-wf-page="59898161d7ec660001c0491c" data-wf-site="598874739abf440001d32417">
+<html data-wf-page="59899bfa22e8860001ac2c5e" data-wf-site="598874739abf440001d32417">
 <head>
   <meta charset="utf-8">
-  <title>Styles</title>
-  <meta content="Styles" property="og:title">
+  <title>Log in</title>
+  <meta content="Log in" property="og:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
@@ -46,14 +46,9 @@
   </div>
   <div class="section">
     <div class="containergeneral w-container">
-      <div class="h1">Page titles and major headlines</div>
-      <div class="h2">Section titles and sub-heads</div>
-      <div class="h3">Form titles and sub-sections</div>
-      <div class="bodycopy">Body copy</div>
-    </div>
-    <div class="containergeneral w-container">
+      <div class="h3">Log in</div>
       <div class="formblock w-form">
-        <form data-name="Email Form" id="email-form" name="email-form"><input class="textfield w-input" data-name="Name" id="name" maxlength="256" name="name" placeholder="Email address" type="text"><input class="textfield w-input" data-name="password" id="password" maxlength="256" name="password" placeholder="Create a password" required="required" type="password"><input class="button w-button" data-wait="Please wait..." type="submit" value="Sign up"></form>
+        <form action="/log_in" data-name="Log in form" id="wf-form-Log-in-form" method="post" name="wf-form-Log-in-form"><input class="textfield w-input" data-name="email" id="email" maxlength="256" name="email" placeholder="Email address" type="text"><input class="textfield w-input" data-name="password" id="password" maxlength="256" name="password" placeholder="Password" required="required" type="password"><input class="button w-button" data-wait="Please wait..." type="submit" value="Log in"></form>
         <div class="w-form-done">
           <div>Thank you! Your submission has been received!</div>
         </div>
@@ -63,7 +58,7 @@
       </div>
     </div>
     <div class="containergeneral w-container">
-      <div class="bodycopy">Already have an mbnb account? <a href="index.html" class="link">Log in</a></div>
+      <div class="bodycopy">Don't have account? <a href="/sign_up" class="link">Sign up</a></div>
     </div>
   </div>
   <div class="footer">

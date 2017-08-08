@@ -1,0 +1,31 @@
+<DOCTYPE html>
+<head>
+</head>
+
+<body>
+  <% if current_user %>
+
+   <h1>  Welcome, <b><%= current_user.email %></b> </h1>
+
+    <form method = 'post' action = '/logout'>
+      <input type = 'hidden' name = '_method' value = 'delete'>
+      <input type = 'submit' value ='Log out'>
+    </form>
+
+  <% end%>
+
+  <% if flash[:errors] %>
+    <ul id = 'errors'>
+      <% flash[:errors].each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <% if flash[:notice] %>
+    <%= flash[:notice]%>
+  <% end %>
+
+  <%= yield %>
+</body>
+</html>
