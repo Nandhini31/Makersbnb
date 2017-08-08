@@ -1,5 +1,3 @@
-require 'web_helper'
-
 feature 'Listings' do
   before { create_listing }
 

@@ -4,8 +4,9 @@ require File.join(File.dirname(__FILE__), '../app/', 'app.rb')
 
 require 'capybara'
 require 'capybara/rspec'
-# require './app/app'
-require './app/models/listing'
+require 'database_cleaner'
+require 'web_helper'
+# require './app/models/listing'
 
 Capybara.app = Makersbnb
 
