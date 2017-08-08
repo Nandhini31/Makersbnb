@@ -6,6 +6,8 @@ class User
 
   attr_reader :password
 
+  has n, :listings
+
   property :id, Serial
   property :email, String, format: :email_address, required: true, unique: true
   property :first_name, String

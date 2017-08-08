@@ -5,7 +5,7 @@
 <body>
   <% if current_user %>
 
-   <h1>  Welcome, <b><%= current_user.email %></b> </h1>
+   <h1>  Welcome <b><%= current_user.email %></b> </h1>
 
     <form method = 'post' action = '/logout'>
       <input type = 'hidden' name = '_method' value = 'delete'>
