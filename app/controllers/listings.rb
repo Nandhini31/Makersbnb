@@ -3,7 +3,7 @@ class Makersbnb < Sinatra::Base
 
   get '/listings' do
     @listings = Listing.all
-    erb :'listings/index'
+    erb :'listings/index', layout: :layout
   end
 
   get '/listings/new' do

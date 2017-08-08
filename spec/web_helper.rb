@@ -13,3 +13,11 @@ def sign_up(email: 'user@yahoo.com', first_name: 'John', surname: 'Doe', passwor
   fill_in('password', with: password)
   click_button('Sign up')
 end
+
+
+def log_in(email: 'user@yahoo.com', password: 'password')
+  visit '/log_in'
+  fill_in('email', with: email)
+  fill_in('password', with: password)
+  click_button('Log in')
+end
