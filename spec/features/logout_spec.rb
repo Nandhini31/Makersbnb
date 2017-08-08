@@ -4,6 +4,6 @@ feature 'Logout' do
     log_in
     click_button('Log out')
     expect(page).to have_content 'goodbye!'
-    expect(page).not_to have_content('Welcome, user@yahoo.com')
+    expect(page).not_to have_content('Welcome user@yahoo.com')
   end
 end
