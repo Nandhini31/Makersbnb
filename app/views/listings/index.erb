@@ -1,0 +1,17 @@
+<html>
+<head>
+  <title>Listings</title>
+</head>
+<body>
+
+<ul id="listings">
+  <% @listings.each do |listing| %>
+  <li>
+  <p><%= listing.title %></p>
+  <p><%= listing.description %></p>
+  </li>
+  <% end %>
+</ul>
+
+</body>
+</html>
