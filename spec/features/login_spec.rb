@@ -3,7 +3,7 @@ feature 'Login' do
     sign_up
     log_in
     expect(page).to have_current_path '/listings'
-    expect(page).to have_content('Welcome, user@yahoo.com')
+    expect(page).to have_content('Welcome user@yahoo.com')
   end
 
   scenario 'I cannot log in incorrect credentials' do
