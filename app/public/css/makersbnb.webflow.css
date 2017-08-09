@@ -312,6 +312,9 @@
     border-bottom-style: none;
     color: #d8d8d8;
   }
+  .navlink.w--current {
+    color: #fff;
+  }
   .button.menu {
     height: 64px;
     margin-top: 0px;

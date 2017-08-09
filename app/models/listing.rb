@@ -4,4 +4,5 @@ class Listing
   property :id, Serial
   property :title, String
   property :description, Text
+  property :price, Integer
 end

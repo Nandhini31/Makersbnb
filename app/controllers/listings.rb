@@ -11,7 +11,7 @@ class Makersbnb < Sinatra::Base
   end
 
   post '/listings/new' do
-    Listing.create(title: params[:title], description: params[:description])
+    Listing.create(title: params[:title], description: params[:description], price: params[:price])
     # p listing
     # listing.user = current_user
     # listing.save
