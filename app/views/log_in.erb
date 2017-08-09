@@ -1,17 +1,19 @@
-<!DOCTYPE html>
-<hmtl lang='en'>
-  <head>
-    <meta charset='UTF-8'/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Log in</title>
-  </head>
-  <body>
-    <form method="post" action="/log_in">
-      Email:<input name="email" type="email">
-      <br></br>
-      Password:<input name = "password" type="password">
-      <br></br>
-      <input type = "submit" value = "Log in">
-    </form>
-  </body>
-</html>
+  <div class="section">
+    <div class="containergeneral w-container">
+      <div class="h3">Log in to mbnb:</div>
+      <div class="formblock w-form">
+
+        <!-- INTEGRATION STARTS -->
+        <form action="/log_in" id="wf-form-Log-in-form" method="post" name="wf-form-Log-in-form">
+          <input class="textfield w-input" id="email" maxlength="256" name="email" placeholder="Email address" type="text">
+          <input class="textfield w-input" id="password" maxlength="256" name="password" placeholder="Password" required="required" type="password">
+          <input class="button w-button" type="submit" value="Log in">
+        </form>
+        <!-- INTEGRATION ENDS -->
+
+      </div>
+    </div>
+    <div class="containergeneral w-container">
+      <div class="bodycopy">Don't have an account? <a href="index.html" class="link">Sign up</a></div>
+    </div>
+  </div>
