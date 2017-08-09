@@ -4,5 +4,8 @@ class Listing
   property :id, Serial
   property :title, String
   property :description, Text
-  property :price, Integer
+  # property :address, Text
+  property :price_per_night, Integer
+
+  belongs_to :user
 end

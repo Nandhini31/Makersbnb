@@ -66,7 +66,7 @@ $( document ).ready( function() {
         <div class="formmenu w-form">
           <form action="/logout" data-name="logout" id="wf-form-logout" method="post" name="wf-form-logout">
             <div class="w-embed"><input type="hidden" name="_method" value="delete"></div>
-            <input class="button menu w-button" type="submit" value="Logout"></form>
+            <input class="button menu w-button" type="submit" value="Log out"></form>
         </div>
       </nav>
       <div class="menubutton w-nav-button" data-ix="navbar">
@@ -103,7 +103,7 @@ $( document ).ready( function() {
     <div class="containergeneral w-container">
       <ol class="dark ulflash">
         <li class="liflash">
-          <div class="bodycopy">flash[:notice]</div>
+          <div class="bodycopy"><%= flash[:notice]%></div>
         </li>
       </ol>
     </div>
