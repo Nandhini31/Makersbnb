@@ -7,7 +7,8 @@
 <ul id="listings">
   <% @listings.each do |listing| %>
   <li>
-  <p><%= listing.title %></p>
+  <a href='/listing?id=<%= listing.id %>'>
+  <p><%= listing.title %></p></a>
   <p><%= listing.description %></p>
   <p><%= listing.price_per_night %></p>
   <p><%= listing.user.email %></p>

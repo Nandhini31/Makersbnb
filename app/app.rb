@@ -44,6 +44,10 @@ class Makersbnb < Sinatra::Base
     end
   end
 
+  # get '/listing' do
+  #   p params[:id].to_i
+  # end
+
   delete '/logout' do
     session[:user_id] = nil
     flash.keep[:notice] = 'goodbye!'
