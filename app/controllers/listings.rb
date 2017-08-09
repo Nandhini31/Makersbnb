@@ -14,10 +14,8 @@ class Makersbnb < Sinatra::Base
   post '/listings/new' do
     listing = Listing.create(title: params[:title], description: params[:description],
     price_per_night: params[:price])
-     p listing
     listing.user = current_user
     listing.save
-    p listing
     redirect '/listings'
   end
 end
