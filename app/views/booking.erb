@@ -1,0 +1,20 @@
+<html>
+<head>
+  <title>Bookings</title>
+</head>
+<body>
+  <br></br>
+  <br></br>
+  <br></br>
+  <br></br>
+  <p><%= @listing.title %></p>
+  <p><%= @listing.description %></p>
+  <p><%= @listing.price_per_night %></p>
+  <p><%= @listing.user.email %></p>
+  <form method = 'post' action = '/bookings/new'>
+    <input name="start date" type="date" placeholder = "start date">
+    <input name="end date" type="date"placeholder = "start date">
+    <input type = "submit" value = "Request booking">
+  </form>
+</body>
+</html>

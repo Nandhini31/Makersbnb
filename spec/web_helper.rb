@@ -23,3 +23,12 @@ def log_in(email: 'user@yahoo.com', password: 'password')
   fill_in('password', with: password)
   click_button('Log in')
 end
+
+# def request_booking
+#   create_listing
+#   visit('/listings')
+#   click_on('Lovely place No.1')
+#   fill_in('start date', with: '12/01/2018')
+#   fill_in('end date', with: '15/01/2018')
+#   click_button('Request booking')
+# end

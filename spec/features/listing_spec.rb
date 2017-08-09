@@ -13,4 +13,12 @@ feature 'Listings' do
       # expect(page).to have_content(50)
     end
   end
+
+  scenario 'view one listing' do
+    visit('/listings')
+    click_on('Lovely place No.1')
+    expect(page).to have_content('Lovely place No.1')
+    expect(page).to have_content('Nice and charming place to stay')
+    expect(page).to have_content(50)
+  end
 end

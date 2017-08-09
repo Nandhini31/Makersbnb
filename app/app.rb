@@ -44,9 +44,15 @@ class Makersbnb < Sinatra::Base
     end
   end
 
-  # get '/listing' do
-  #   p params[:id].to_i
-  # end
+  get '/listing/:id' do
+    @listing = Listing.first(id: params[:id])
+    p @listing.description
+    p @listing.title
+    p @listing.price_per_night
+
+    erb(:booking)
+  end
+
 
   delete '/logout' do
     session[:user_id] = nil

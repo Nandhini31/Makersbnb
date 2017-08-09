@@ -18,4 +18,9 @@ class Makersbnb < Sinatra::Base
     listing.save
     redirect '/listings'
   end
+
+  get '/listing' do
+    
+  end
+
 end
