@@ -40,7 +40,7 @@ $( document ).ready( function() {
   <% if !current_user %>
   <div class="navbar w-nav" data-animation="default" data-collapse="small" data-duration="400">
     <div class="w-container">
-      <a class="w-nav-brand" href="index.html">
+      <a class="w-nav-brand" href="/">
         <div class="logo">mbnb</div>
       </a>
       <nav class="navmenu w-nav-menu" role="navigation"><a class="navlink w-nav-link" href="#">About</a><a class="navlink w-nav-link" href="/log_in">Login</a></nav>
@@ -59,10 +59,10 @@ $( document ).ready( function() {
   <% if current_user %>
   <div class="navbar w-nav" data-animation="default" data-collapse="small" data-duration="400">
     <div class="w-container">
-      <a class="w-nav-brand" href="index.html">
+      <a class="w-nav-brand" href="/">
         <div class="logo">mbnb</div>
       </a>
-      <nav class="navmenu w-clearfix w-nav-menu" role="navigation"><a class="navlink w-nav-link" href="/dashboard">My Dashboard</a>
+      <nav class="navmenu w-clearfix w-nav-menu" role="navigation"><a class="navlink w-nav-link" href="/listings">Listings</a><a class="navlink w-nav-link" href="/dashboard">My Dashboard</a>
         <div class="formmenu w-form">
           <form action="/logout" class="w-clearfix" data-name="logout" id="wf-form-logout" method="post" name="wf-form-logout">
             <div class="w-embed"><input type="hidden" name="_method" value="delete"></div><input class="button menu w-button" data-wait="Please wait..." type="submit" value="Log out"></form>

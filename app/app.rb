@@ -22,6 +22,10 @@ class Makersbnb < Sinatra::Base
     end
   end
 
+  get '/' do
+    if current_user then redirect '/listings' else redirect '/sign_up' end
+  end
+
   get '/sign_up' do
     erb(:sign_up)
   end
@@ -51,7 +55,7 @@ class Makersbnb < Sinatra::Base
   get '/listing/:id' do
     @listing = Listing.first(id: params[:id])
     session[:listing_id] = @listing.id
-    erb(:booking)
+    erb :'/listings/listing_page'
   end
 
   post '/booking/new' do
