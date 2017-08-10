@@ -9,7 +9,8 @@ class Makersbnb < Sinatra::Base
   use Rack::MethodOverride
 
   enable :sessions
-  set :session_secret, 'super secret'
+  # set :session_secret, 'super secret'
+  set :session_secret, rand.to_s
   register Sinatra::Flash
 
   helpers do

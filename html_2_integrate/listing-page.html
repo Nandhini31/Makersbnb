@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com -->
 <!--  Last Published: Thu Aug 10 2017 20:04:39 GMT+0000 (UTC)  -->
-<html data-wf-page="598a35e0fda8db0001802ede" data-wf-site="598874739abf440001d32417">
+<html data-wf-page="598b243efda8db000180d8b8" data-wf-site="598874739abf440001d32417">
 <head>
   <meta charset="utf-8">
-  <title>Create Listing</title>
-  <meta content="Create Listing" property="og:title">
+  <title>Listing Page</title>
+  <meta content="Listing Page" property="og:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
@@ -30,7 +30,18 @@
       <a class="w-nav-brand" href="index.html">
         <div class="logo">mbnb</div>
       </a>
-      <nav class="navmenu w-nav-menu" role="navigation"><a class="navlink w-nav-link" href="#">About</a><a class="navlink w-nav-link" href="/log_in">Login</a></nav>
+      <nav class="navmenu w-clearfix w-nav-menu" role="navigation"><a class="navlink w-nav-link" href="listings.html">Listings</a><a class="navlink w-nav-link" href="#">My Dashboard</a>
+        <div class="formmenu w-form">
+          <form action="/logout" class="w-clearfix" data-name="logout" id="wf-form-logout" method="post" name="wf-form-logout">
+            <div class="w-embed"><input type="hidden" name="_method" value="delete"></div><input class="button menu w-button" data-wait="Please wait..." type="submit" value="Log out"></form>
+          <div class="w-form-done">
+            <div>Thank you! Your submission has been received!</div>
+          </div>
+          <div class="w-form-fail">
+            <div>Oops! Something went wrong while submitting the form.</div>
+          </div>
+        </div>
+      </nav>
       <div class="menubutton w-nav-button" data-ix="navbar">
         <div class="hambtop"></div>
         <div class="hambmid"></div>
@@ -38,16 +49,27 @@
       </div>
     </div>
   </div>
-  <div class="section">
-    <div class="containergeneral w-container">
-      <div class="h3">Add new listing</div>
-      <div class="formblock w-form">
-        <form action="/listings/new" data-name="Sign up form" id="wf-form-Sign-up-form" method="post" name="wf-form-Sign-up-form"><input class="textfield w-input" data-name="title" id="title" maxlength="256" name="title" placeholder="Title" required="required" type="text"><input class="textfield w-input" data-name="description" id="description" maxlength="256" name="description" placeholder="Description" required="required" type="text"><input class="textfield w-input" data-name="price" id="price" maxlength="256" name="price" placeholder="Price per night" required="required" type="text"><input class="button w-button" data-wait="Please wait..." type="submit" value="Submit listing"></form>
-        <div class="w-form-done">
-          <div>Thank you! Your submission has been received!</div>
+  <div class="cover section"></div>
+  <div class="listingbody section">
+    <div class="containergeneral listingbody w-container">
+      <div class="listingcontainer">
+        <div class="listing single">
+          <div class="h2">Place title</div>
+          <div class="bodycopy caption">Place description. A couple of lines of text usually.</div>
         </div>
-        <div class="w-form-fail">
-          <div>Oops! Something went wrong while submitting the form.</div>
+        <div class="bookingformdiv">
+          <div class="bookingformprice">
+            <div class="h3 inline white">£45 <span class="bodycopy">per night</span></div>
+          </div>
+          <div class="formblock nomargins w-form">
+            <form action="/booking/new" data-name="Booking form" id="wf-form-Booking-form" method="post" name="wf-form-Booking-form"><input class="textfield w-input" data-name="startDate" id="startDate" maxlength="256" name="startDate" placeholder="Start date" type="text"><input class="textfield w-input" data-name="endDate" id="endDate" maxlength="256" name="endDate" placeholder="End date" required="required" type="text"><input class="button w-button" data-wait="Please wait..." type="submit" value="Request booking"></form>
+            <div class="w-form-done">
+              <div>Thank you! Your submission has been received!</div>
+            </div>
+            <div class="w-form-fail">
+              <div>Oops! Something went wrong while submitting the form.</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

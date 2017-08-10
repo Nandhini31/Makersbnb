@@ -16,11 +16,6 @@ class Makersbnb < Sinatra::Base
     price_per_night: params[:price])
     listing.user = current_user
     listing.save
-    redirect '/listings'
+    redirect '/dashboard'
   end
-
-  get '/listing' do
-    
-  end
-
 end

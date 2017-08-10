@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com -->
 <!--  Last Published: Thu Aug 10 2017 20:04:39 GMT+0000 (UTC)  -->
-<html data-wf-page="598a2125fda8db00018020a0" data-wf-site="598874739abf440001d32417">
+<html data-wf-page="5989a4fbd7ec660001c05dc6" data-wf-site="598874739abf440001d32417">
 <head>
   <meta charset="utf-8">
-  <title>Layout</title>
-  <meta content="Layout" property="og:title">
+  <title>Listings</title>
+  <meta content="Listings" property="og:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
@@ -30,19 +30,6 @@
       <a class="w-nav-brand" href="index.html">
         <div class="logo">mbnb</div>
       </a>
-      <nav class="navmenu w-nav-menu" role="navigation"><a class="navlink w-nav-link" href="#">About</a><a class="navlink w-nav-link" href="/log_in">Login</a></nav>
-      <div class="menubutton w-nav-button" data-ix="navbar">
-        <div class="hambtop"></div>
-        <div class="hambmid"></div>
-        <div class="hambbottom"></div>
-      </div>
-    </div>
-  </div>
-  <div class="navbar w-nav" data-animation="default" data-collapse="small" data-duration="400">
-    <div class="w-container">
-      <a class="w-nav-brand" href="index.html">
-        <div class="logo">mbnb</div>
-      </a>
       <nav class="navmenu w-clearfix w-nav-menu" role="navigation"><a class="navlink w-nav-link" href="listings.html">Listings</a><a class="navlink w-nav-link" href="#">My Dashboard</a>
         <div class="formmenu w-form">
           <form action="/logout" class="w-clearfix" data-name="logout" id="wf-form-logout" method="post" name="wf-form-logout">
@@ -62,34 +49,56 @@
       </div>
     </div>
   </div>
-  <div class="errors section">
+  <div class="section">
     <div class="containergeneral w-container">
-      <ol class="ulflash">
-        <li class="liflash">
-          <div class="bodycopy white">This is some text inside of a div block.</div>
-        </li>
-        <li class="liflash">
-          <div class="bodycopy white">This is some text inside of a div block.</div>
-        </li>
-        <li class="liflash">
-          <div class="bodycopy white">This is some text inside of a div block.</div>
-        </li>
-      </ol>
-    </div>
-  </div>
-  <div class="notices section">
-    <div class="containergeneral w-container">
-      <ol class="dark ulflash">
-        <li class="liflash">
-          <div class="bodycopy">This is some text inside of a div block.</div>
-        </li>
-        <li class="liflash">
-          <div class="bodycopy">This is some text inside of a div block.</div>
-        </li>
-        <li class="liflash">
-          <div class="bodycopy">This is some text inside of a div block.</div>
-        </li>
-      </ol>
+      <div class="bodycopy">Hello Jack, we ♡ you!</div>
+      <div class="h1">Book a workplace</div>
+      <div class="form-block w-form">
+        <form class="forminline w-clearfix" data-name="Email Form" id="email-form" name="email-form"><input class="inline textfield w-input" data-name="startDate" id="startDate" maxlength="256" name="startDate" placeholder="Start date" required="required" type="text"><input class="inline textfield w-input" data-name="endDate" id="endDate" maxlength="256" name="endDate" placeholder="End date" required="required" type="text"><input class="button inline w-button" data-wait="Please wait..." type="submit" value="Show listings"></form>
+        <div class="w-form-done">
+          <div>Thank you! Your submission has been received!</div>
+        </div>
+        <div class="w-form-fail">
+          <div>Oops! Something went wrong while submitting the form.</div>
+        </div>
+      </div>
+      <div class="listings">
+        <a class="listing w-inline-block" href="listing-page.html">
+          <div>
+            <div class="listingpicture"><img class="image" src="images/5c81cbc6-d712-4087-8d4a-2e5cbb1f1f11.jpg"></div>
+            <div class="h4">£37 Place title</div>
+            <div class="bodycopy caption">Place description. A couple of lines of text usually.</div>
+          </div>
+        </a>
+        <a class="listing w-inline-block" href="#">
+          <div>
+            <div class="listingpicture"><img class="image" src="images/5c81cbc6-d712-4087-8d4a-2e5cbb1f1f11.jpg"></div>
+            <div class="h4">£37 Place title</div>
+            <div class="bodycopy caption">Place description. A couple of lines of text usually.</div>
+          </div>
+        </a>
+        <a class="listing w-inline-block" href="#">
+          <div>
+            <div class="listingpicture"><img class="image" src="images/5c81cbc6-d712-4087-8d4a-2e5cbb1f1f11.jpg"></div>
+            <div class="h4">£37 Place title</div>
+            <div class="bodycopy caption">Place description. A couple of lines of text usually.</div>
+          </div>
+        </a>
+        <a class="listing w-inline-block" href="#">
+          <div>
+            <div class="listingpicture"><img class="image" src="images/5c81cbc6-d712-4087-8d4a-2e5cbb1f1f11.jpg"></div>
+            <div class="h4">£37 Place title</div>
+            <div class="bodycopy caption">Place description. A couple of lines of text usually.</div>
+          </div>
+        </a>
+        <a class="listing w-inline-block" href="#">
+          <div>
+            <div class="listingpicture"><img class="image" src="images/5c81cbc6-d712-4087-8d4a-2e5cbb1f1f11.jpg"></div>
+            <div class="h4">£37 Place title</div>
+            <div class="bodycopy caption">Place description. A couple of lines of text usually.</div>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
   <div class="footer">

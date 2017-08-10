@@ -138,7 +138,7 @@ a {
   -ms-flex-align: end;
   align-items: flex-end;
   background-image: url('../images/bd68e087-6372-4b4d-ad7d-7738da5777c4.jpg');
-  background-position: 0px 0px;
+  background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -511,8 +511,6 @@ a {
   height: 64px;
   margin-top: 0px;
   float: left;
-  border: 3px solid #109e71;
-  border-radius: 80px;
   -webkit-transform: translate(0px, -8px);
   -ms-transform: translate(0px, -8px);
   transform: translate(0px, -8px);

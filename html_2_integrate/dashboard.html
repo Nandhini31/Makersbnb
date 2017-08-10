@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com -->
-<!--  Last Published: Thu Aug 10 2017 15:33:11 GMT+0000 (UTC)  -->
+<!--  Last Published: Thu Aug 10 2017 20:04:39 GMT+0000 (UTC)  -->
 <html data-wf-page="598c2c6990707d000139ff03" data-wf-site="598874739abf440001d32417">
 <head>
   <meta charset="utf-8">
@@ -30,7 +30,7 @@
       <a class="w-nav-brand" href="index.html">
         <div class="logo">mbnb</div>
       </a>
-      <nav class="navmenu w-clearfix w-nav-menu" role="navigation"><a class="navlink w-nav-link" href="#">My Dashboard</a>
+      <nav class="navmenu w-clearfix w-nav-menu" role="navigation"><a class="navlink w-nav-link" href="listings.html">Listings</a><a class="navlink w-nav-link" href="#">My Dashboard</a>
         <div class="formmenu w-form">
           <form action="/logout" class="w-clearfix" data-name="logout" id="wf-form-logout" method="post" name="wf-form-logout">
             <div class="w-embed"><input type="hidden" name="_method" value="delete"></div><input class="button menu w-button" data-wait="Please wait..." type="submit" value="Log out"></form>
@@ -52,6 +52,15 @@
   <div class="section">
     <div class="containergeneral w-container">
       <div class="h1">Nandhini's dashboard</div>
+      <div class="w-form">
+        <form data-name="Email Form" data-redirect="/listings/new" id="listingForm" name="email-form" redirect="/listings/new"><input class="button w-button" data-wait="Please wait..." type="submit" value="List your place"></form>
+        <div class="w-form-done">
+          <div>Thank you! Your submission has been received!</div>
+        </div>
+        <div class="w-form-fail">
+          <div>Oops! Something went wrong while submitting the form.</div>
+        </div>
+      </div>
       <div class="rowwithtwocolumns w-row">
         <div class="column w-col w-col-6 w-col-stack">
           <div class="h3">Bookings</div>
@@ -84,7 +93,7 @@
                 <div class="h4 shrinking">Funmi Adewodu<br><span class="datetime">Sept 10–25, Place title</span></div>
               </div>
               <div class="formblocksmall w-form">
-                <form data-name="Request approval" id="wf-form-Request-approval" method="post" name="wf-form-Request-approval"><input class="button smallform w-button" data-wait="Please wait..." type="submit" value="Approve"><input class="button grey smallform w-button" data-wait="Please wait..." type="submit" value="Reject"></form>
+                <form class="w-clearfix" data-name="Request approval" id="wf-form-Request-approval" method="post" name="wf-form-Request-approval"><input class="button smallform w-button" data-wait="Please wait..." type="submit" value="Approve"><input class="button grey smallform w-button" data-wait="Please wait..." type="submit" value="Reject"></form>
                 <div class="w-form-done">
                   <div>Thank you! Your submission has been received!</div>
                 </div>
@@ -125,7 +134,7 @@
         </div>
       </div>
       <div class="h2">My listings</div>
-      <div class="listings">
+      <div class="listings" id="my_listings">
         <a class="listing w-inline-block" href="listing-page.html">
           <div>
             <div class="listingpicture"><img class="image" src="images/5c81cbc6-d712-4087-8d4a-2e5cbb1f1f11.jpg"></div>

@@ -5,6 +5,9 @@
       <!-- START INTEGRATION -->
       <% @my_listings = @current_user.listings.all %>
       <div class="h1"><%= @current_user.first_name %>'s dashboard</div>
+      <div class="w-form">
+        <form id="listingForm" name="new listing" type="post" action="/listings/new"><input class="button w-button" type="submit" value="List your place"></form>
+      </div>
       <!-- END INTEGRATION -->
 
 
@@ -44,7 +47,7 @@
                 <% start_date = booking.start_date %>
                 <% end_date = booking.end_date %>
                 <% booking_title = booking.listing.title %>
-            <li class="limedium w-clearfix"><img class="userpicmedium" src="images/Screen-Shot-2017-08-10-at-12.40.02.png">
+            <li class="limedium w-clearfix"><img class="userpicmedium" src="images/userpics/<%= booking.user.id %>.png">
               <div class="descriptioncontainermedium">
                 <div class="h4 shrinking"><%= guest_name %><br><span class="datetime"><%= start_date %>-<%= end_date %><br />
                 <%= booking_title %></span></div>
