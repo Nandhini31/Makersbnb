@@ -1,0 +1,16 @@
+<% @listings = @current_user.listings.all %>
+
+<ul id="my_requests">
+  <% @listings.each do |listing| %>
+    <% listing.bookings.all.each do |booking| %>
+      <% guest_name = booking.user.first_name %>
+      <% start_date = booking.start_date %>
+      <% end_date = booking.end_date %>
+      <% booking_title = booking.listing.title %>
+      <li>
+        <%= guest_name %><br />
+        <%= start_date %>–<%= end_date %>, <%= booking_title %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>

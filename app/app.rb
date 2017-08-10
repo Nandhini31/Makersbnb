@@ -66,6 +66,11 @@ class Makersbnb < Sinatra::Base
   end
 
   get '/dashboard' do
+    @current_user = current_user
+    p @current_user
+    p @current_user.listings.all
+    p @current_user.listings.last.bookings.all
+    erb :'user/dashboard'
 
   end
 

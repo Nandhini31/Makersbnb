@@ -15,7 +15,6 @@ def sign_up(email: 'user@yahoo.com', first_name: 'John', surname: 'Doe', passwor
   click_button('Sign up')
 end
 
-
 def log_in(email: 'user@yahoo.com', password: 'password')
   visit '/log_in'
   fill_in('email', with: email)
@@ -28,4 +27,43 @@ def request_booking
   fill_in('start date', with: '08/07/2017')
   fill_in('end date', with: '11/07/2017')
   click_button('Request booking')
+end
+
+def logout
+  click_button('Log out')
+end
+
+
+# Dashboard helpers
+
+def sign_up_as_a_host(email: 'landlord@yahoo.com', first_name: 'Landlord', surname: 'Oftherings', password: '123')
+  visit '/sign_up'
+  fill_in('email', with: email)
+  fill_in('first_name', with: first_name )
+  fill_in('surname', with: surname)
+  fill_in('password', with: password)
+  click_button('Sign up')
+end
+
+def log_in_as_a_host(email: 'landlord@yahoo.com', password: '123')
+  visit '/log_in'
+  fill_in('email', with: email)
+  fill_in('password', with: password)
+  click_button('Log in')
+end
+
+def sign_up_as_a_guest(email: 'guest@yahoo.com', first_name: 'Pope', surname: 'Benedict', password: '42')
+  visit '/sign_up'
+  fill_in('email', with: email)
+  fill_in('first_name', with: first_name )
+  fill_in('surname', with: surname)
+  fill_in('password', with: password)
+  click_button('Sign up')
+end
+
+def log_in_as_a_guest(email: 'guest@yahoo.com', password: '42')
+  visit '/log_in'
+  fill_in('email', with: email)
+  fill_in('password', with: password)
+  click_button('Log in')
 end
