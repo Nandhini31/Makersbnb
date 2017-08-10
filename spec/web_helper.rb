@@ -25,9 +25,7 @@ end
 
 def request_booking
   click_on('Lovely place No.1')
-  # fill_in('start date', with: '08/07/2017')
-  # fill_in('end date', with: '11/07/2017')
-  page.execute_script("$('#datepicker').datepicker('setDate','08/07/2017')")
-  page.execute_script("$('#datepicker2').datepicker('setDate','11/07/2017')")
+  fill_in('start date', with: '08/07/2017')
+  fill_in('end date', with: '11/07/2017')
   click_button('Request booking')
 end

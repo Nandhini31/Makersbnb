@@ -16,7 +16,5 @@ end
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
-  gem 'phantomjs'
-  gem 'poltergeist'
   gem 'rspec'
 end

@@ -15,20 +15,10 @@
   <p><%= @listing.price_per_night %></p>
   <p><%= @listing.user.email %></p>
   <form method = 'post' action = '/booking/new'>
-     <input id="datepicker" type="text" name="start date" placeholder = "start date">
-     <input id="datepicker2" type="text" name="end date" placeholder = "end date" >
-
-
+     <input id="datepicker" type="text" name="start_date" placeholder = "start date">
+     <input id="datepicker2" type="text" name="end_date" placeholder = "end date" >
     <input type = "submit" value = "Request booking">
   </form>
 
-  <script>
-  $( function() {
-    $( "#datepicker" ).datepicker();
-    $( "#datepicker2" ).datepicker();
-
-  } );
-
-  </script>
 </body>
 </html>

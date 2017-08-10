@@ -1,4 +1,4 @@
-feature 'Bookings', js: true do
+feature 'Bookings' do
   before do
     sign_up
     log_in
@@ -6,7 +6,7 @@ feature 'Bookings', js: true do
     visit('/listings')
   end
 
-  scenario 'Create booking', js: true do
+  scenario 'Create booking' do
     expect{ request_booking }.to change(Booking, :count).by(1)
     # expect(page).to have_content('Request sent to the host')
   end

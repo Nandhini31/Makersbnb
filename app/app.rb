@@ -56,6 +56,7 @@ class Makersbnb < Sinatra::Base
     @booking.listing = @listing
     @booking.save
     p @booking
+    p @booking.start_date
   end
 
 
