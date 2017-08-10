@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com -->
 <!--  Last Published: Thu Aug 10 2017 15:33:11 GMT+0000 (UTC)  -->
-<html data-wf-page="598874739abf440001d32418" data-wf-site="598874739abf440001d32417">
+<html data-wf-page="598a35e0fda8db0001802ede" data-wf-site="598874739abf440001d32417">
 <head>
   <meta charset="utf-8">
-  <title>Makersbnb</title>
+  <title>Create Listing</title>
+  <meta content="Create Listing" property="og:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
@@ -39,12 +40,9 @@
   </div>
   <div class="section">
     <div class="containergeneral w-container">
-      <div class="h1">Feel at home, anywhere</div>
-    </div>
-    <div class="containergeneral w-container">
-      <div class="h3">Sign up to mbnb</div>
+      <div class="h3">Add new listing</div>
       <div class="formblock w-form">
-        <form action="/sign_up" data-name="Sign up form" id="wf-form-Sign-up-form" method="post" name="wf-form-Sign-up-form"><input class="textfield w-input" data-name="email" id="email" maxlength="256" name="email" placeholder="Email address" type="text"><input class="textfield w-input" data-name="first_name" id="first_name" maxlength="256" name="first_name" placeholder="First name" type="text"><input class="textfield w-input" data-name="surname" id="surname" maxlength="256" name="surname" placeholder="Surname" type="text"><input class="textfield w-input" data-name="password" id="password" maxlength="256" name="password" placeholder="Create a password" required="required" type="password"><input class="button w-button" data-wait="Please wait..." type="submit" value="Sign up"></form>
+        <form action="/listings/new" data-name="Sign up form" id="wf-form-Sign-up-form" method="post" name="wf-form-Sign-up-form"><input class="textfield w-input" data-name="title" id="title" maxlength="256" name="title" placeholder="Title" required="required" type="text"><input class="textfield w-input" data-name="description" id="description" maxlength="256" name="description" placeholder="Description" required="required" type="text"><input class="textfield w-input" data-name="price" id="price" maxlength="256" name="price" placeholder="Price per night" required="required" type="text"><input class="button w-button" data-wait="Please wait..." type="submit" value="Submit listing"></form>
         <div class="w-form-done">
           <div>Thank you! Your submission has been received!</div>
         </div>
@@ -52,9 +50,6 @@
           <div>Oops! Something went wrong while submitting the form.</div>
         </div>
       </div>
-    </div>
-    <div class="containergeneral w-container">
-      <div class="bodycopy">Already have an account? <a href="/log_in" class="link">Log in</a></div>
     </div>
   </div>
   <div class="footer">

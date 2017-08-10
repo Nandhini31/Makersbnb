@@ -67,11 +67,11 @@ class Makersbnb < Sinatra::Base
 
   get '/dashboard' do
     @current_user = current_user
+    puts "We are almost in dashboard:"
     p @current_user
     p @current_user.listings.all
-    p @current_user.listings.last.bookings.all
+    p @current_user.listings.last
     erb :'user/dashboard'
-
   end
 
   delete '/logout' do

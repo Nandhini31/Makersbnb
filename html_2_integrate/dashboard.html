@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!--  This site was created in Webflow. http://www.webflow.com -->
+<!--  Last Published: Thu Aug 10 2017 15:33:11 GMT+0000 (UTC)  -->
+<html data-wf-page="598c2c6990707d000139ff03" data-wf-site="598874739abf440001d32417">
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard</title>
+  <meta content="Dashboard" property="og:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/makersbnb.webflow.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({
+  google: {
+    families: ["Droid Sans:400,700"]
+  }
+});</script>
+  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);
+</script>
+  <link href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+</head>
+<body class="body">
+  <div class="navbar w-nav" data-animation="default" data-collapse="small" data-duration="400">
+    <div class="w-container">
+      <a class="w-nav-brand" href="index.html">
+        <div class="logo">mbnb</div>
+      </a>
+      <nav class="navmenu w-clearfix w-nav-menu" role="navigation"><a class="navlink w-nav-link" href="#">My Dashboard</a>
+        <div class="formmenu w-form">
+          <form action="/logout" class="w-clearfix" data-name="logout" id="wf-form-logout" method="post" name="wf-form-logout">
+            <div class="w-embed"><input type="hidden" name="_method" value="delete"></div><input class="button menu w-button" data-wait="Please wait..." type="submit" value="Log out"></form>
+          <div class="w-form-done">
+            <div>Thank you! Your submission has been received!</div>
+          </div>
+          <div class="w-form-fail">
+            <div>Oops! Something went wrong while submitting the form.</div>
+          </div>
+        </div>
+      </nav>
+      <div class="menubutton w-nav-button" data-ix="navbar">
+        <div class="hambtop"></div>
+        <div class="hambmid"></div>
+        <div class="hambbottom"></div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="containergeneral w-container">
+      <div class="h1">Nandhini's dashboard</div>
+      <div class="rowwithtwocolumns w-row">
+        <div class="column w-col w-col-6 w-col-stack">
+          <div class="h3">Bookings</div>
+          <ul class="ulmedium" id="my_bookings">
+            <li class="limedium w-clearfix"><img class="previewmedium" src="images/5c81cbc6-d712-4087-8d4a-2e5cbb1f1f11.jpg">
+              <div class="descriptioncontainermedium">
+                <div class="h4 shrinking"><span class="datetime">Sept 10–25<br xmlns="http://www.w3.org/1999/xhtml"></span>Lovely double bedroom ...</div>
+                <div class="bodycopy green status">Confirmed</div>
+              </div>
+            </li>
+            <li class="limedium w-clearfix"><img class="previewmedium" sizes="(max-width: 479px) 60px, 120px" src="images/f996f772-1aec-4a40-a850-346785d15843.jpg" srcset="images/f996f772-1aec-4a40-a850-346785d15843-p-1080.jpeg 1080w, images/f996f772-1aec-4a40-a850-346785d15843.jpg 1436w">
+              <div class="descriptioncontainermedium">
+                <div class="h4 shrinking"><span class="datetime">Oct 20–31<br xmlns="http://www.w3.org/1999/xhtml"></span>Bright double room in ...</div>
+                <div class="bodycopy red status">Cancelled</div>
+              </div>
+            </li>
+            <li class="limedium w-clearfix"><img class="previewmedium" src="images/bd68e087-6372-4b4d-ad7d-7738da5777c4.jpg">
+              <div class="descriptioncontainermedium">
+                <div class="h4 shrinking"><span class="datetime">Dec 24–26<br xmlns="http://www.w3.org/1999/xhtml"></span>Lovely double room ...</div>
+                <div class="bodycopy grey status">Request sent...</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="column-2 w-col w-col-6 w-col-stack">
+          <div class="h3">Requests</div>
+          <ul class="ulmedium" id="my_requests">
+            <li class="limedium w-clearfix"><img class="userpicmedium" src="images/Screen-Shot-2017-08-10-at-12.40.02.png">
+              <div class="descriptioncontainermedium">
+                <div class="h4 shrinking">Funmi Adewodu<br><span class="datetime">Sept 10–25, Place title</span></div>
+              </div>
+              <div class="formblocksmall w-form">
+                <form data-name="Request approval" id="wf-form-Request-approval" method="post" name="wf-form-Request-approval"><input class="button smallform w-button" data-wait="Please wait..." type="submit" value="Approve"><input class="button grey smallform w-button" data-wait="Please wait..." type="submit" value="Reject"></form>
+                <div class="w-form-done">
+                  <div>Thank you! Your submission has been received!</div>
+                </div>
+                <div class="w-form-fail">
+                  <div>Oops! Something went wrong while submitting the form.</div>
+                </div>
+              </div>
+            </li>
+            <li class="limedium w-clearfix"><img class="userpicmedium" src="images/Screen-Shot-2017-08-10-at-12.40.14.png">
+              <div class="descriptioncontainermedium">
+                <div class="h4 shrinking">Michael Gordon Brown<br><span class="datetime">Sept 10–25, Place title</span></div>
+              </div>
+              <div class="formblocksmall w-form">
+                <form class="w-clearfix" data-name="Request approval" id="wf-form-Request-approval" method="post" name="wf-form-Request-approval"><input class="button smallform w-button" data-wait="Please wait..." type="submit" value="Approve"><input class="button grey smallform w-button" data-wait="Please wait..." type="submit" value="Reject"></form>
+                <div class="w-form-done">
+                  <div>Thank you! Your submission has been received!</div>
+                </div>
+                <div class="w-form-fail">
+                  <div>Oops! Something went wrong while submitting the form.</div>
+                </div>
+              </div>
+            </li>
+            <li class="limedium w-clearfix"><img class="userpicmedium" src="images/Screen-Shot-2017-08-10-at-12.40.26.png">
+              <div class="descriptioncontainermedium">
+                <div class="h4 shrinking">Oleg Lukyanov<br><span class="datetime">Sept 10–25, Place title</span></div>
+              </div>
+              <div class="formblocksmall w-form">
+                <form class="w-clearfix" data-name="Request approval" id="wf-form-Request-approval" method="post" name="wf-form-Request-approval"><input class="button smallform w-button" data-wait="Please wait..." type="submit" value="Approve"><input class="button grey smallform w-button" data-wait="Please wait..." type="submit" value="Reject"></form>
+                <div class="w-form-done">
+                  <div>Thank you! Your submission has been received!</div>
+                </div>
+                <div class="w-form-fail">
+                  <div>Oops! Something went wrong while submitting the form.</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="h2">My listings</div>
+      <div class="listings">
+        <a class="listing w-inline-block" href="listing-page.html">
+          <div>
+            <div class="listingpicture"><img class="image" src="images/5c81cbc6-d712-4087-8d4a-2e5cbb1f1f11.jpg"></div>
+            <div class="h4">£37 Place title</div>
+            <div class="bodycopy caption">Place description. A couple of lines of text usually.</div>
+          </div>
+        </a>
+        <a class="listing w-inline-block" href="#">
+          <div>
+            <div class="listingpicture"><img class="image" sizes="(max-width: 479px) 98vw, (max-width: 767px) 93vw, (max-width: 991px) 348px, 294.1875px" src="images/f996f772-1aec-4a40-a850-346785d15843.jpg" srcset="images/f996f772-1aec-4a40-a850-346785d15843-p-1080.jpeg 1080w, images/f996f772-1aec-4a40-a850-346785d15843.jpg 1436w"></div>
+            <div class="h4">£37 Place title</div>
+            <div class="bodycopy caption">Place description. A couple of lines of text usually.</div>
+          </div>
+        </a>
+        <a class="listing w-inline-block" href="#">
+          <div>
+            <div class="listingpicture"><img class="image" src="images/bd68e087-6372-4b4d-ad7d-7738da5777c4.jpg"></div>
+            <div class="h4">£37 Place title</div>
+            <div class="bodycopy caption">Place description. A couple of lines of text usually.</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="w-container">
+      <div class="smallcopy">To the maximum extent allowed by law mbnb, its representatives, employees and directors are not liable for any direct or indirect damages that result from use or inability to use of its services. By using mbnb you are personally responsible for compliance with all the international and local laws.</div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  <script>
+$(document).ready(function() {
+	$( "#startDate" ).datepicker();
+  	$( "#endDate" ).datepicker();
+});
+</script>
+</body>
+</html>

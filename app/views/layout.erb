@@ -62,11 +62,10 @@ $( document ).ready( function() {
       <a class="w-nav-brand" href="index.html">
         <div class="logo">mbnb</div>
       </a>
-      <nav class="navmenu w-nav-menu" role="navigation"><a class="navlink w-nav-link" href="#">My Places</a><a class="navlink w-nav-link" href="#">My Bookings</a>
+      <nav class="navmenu w-clearfix w-nav-menu" role="navigation"><a class="navlink w-nav-link" href="/dashboard">My Dashboard</a>
         <div class="formmenu w-form">
-          <form action="/logout" data-name="logout" id="wf-form-logout" method="post" name="wf-form-logout">
-            <div class="w-embed"><input type="hidden" name="_method" value="delete"></div>
-            <input class="button menu w-button" type="submit" value="Log out"></form>
+          <form action="/logout" class="w-clearfix" data-name="logout" id="wf-form-logout" method="post" name="wf-form-logout">
+            <div class="w-embed"><input type="hidden" name="_method" value="delete"></div><input class="button menu w-button" data-wait="Please wait..." type="submit" value="Log out"></form>
         </div>
       </nav>
       <div class="menubutton w-nav-button" data-ix="navbar">

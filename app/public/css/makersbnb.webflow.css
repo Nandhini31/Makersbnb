@@ -1,3 +1,8 @@
+a {
+  color: #000;
+  text-decoration: none;
+}
+
 .navbar {
   position: fixed;
   width: 100%;
@@ -64,10 +69,44 @@
   color: #fff;
 }
 
+.bodycopy.status {
+  display: inline-block;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 3px;
+  background-color: #7c7c7c;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.bodycopy.status.green {
+  background-color: #109e71;
+}
+
+.bodycopy.status.red {
+  background-color: #e44609;
+}
+
+.bodycopy.status.grey {
+  background-color: #969696;
+}
+
 .h3 {
   margin-top: 16px;
+  margin-bottom: 16px;
   font-size: 24px;
   line-height: 32px;
+  font-weight: 400;
+}
+
+.h3.inline {
+  margin-top: 0px;
+}
+
+.h3.inline.white {
+  color: #fff;
+  text-align: left;
 }
 
 .section {
@@ -86,6 +125,28 @@
   background-color: #fff5ad;
 }
 
+.section.cover {
+  height: 80vh;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  background-image: url('../images/bd68e087-6372-4b4d-ad7d-7738da5777c4.jpg');
+  background-position: 0px 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.section.listingbody {
+  padding-top: 0px;
+}
+
 .formblock {
   display: inline-block;
   width: 400px;
@@ -95,6 +156,13 @@
   border: 1px solid #bdbdbd;
   border-radius: 5px;
   background-color: #fff;
+}
+
+.formblock.nomargins {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
 }
 
 .button {
@@ -118,9 +186,44 @@
 
 .button.menu {
   height: 32px;
+  margin-left: 8px;
   float: right;
   font-size: 12px;
   line-height: 8px;
+}
+
+.button.menu.grey {
+  border-color: #969696;
+  background-color: #969696;
+}
+
+.button.menu.grey:hover {
+  border-color: #e44609;
+  background-color: #e44609;
+}
+
+.button.inline {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  float: left;
+}
+
+.button.smallform {
+  height: 32px;
+  margin-left: 8px;
+  float: right;
+  font-size: 12px;
+  line-height: 8px;
+}
+
+.button.smallform.grey {
+  border-color: #969696;
+  background-color: #969696;
+}
+
+.button.smallform.grey:hover {
+  border-color: #e44609;
+  background-color: #e44609;
 }
 
 .footer {
@@ -142,9 +245,28 @@
   line-height: 23px;
 }
 
+.textfield.inline {
+  max-width: 360px;
+  margin-right: 16px;
+  margin-bottom: 0px;
+  float: left;
+}
+
 .containergeneral {
   padding-top: 16px;
   padding-bottom: 16px;
+}
+
+.containergeneral.listingbody {
+  display: block;
+  padding-top: 0px;
+}
+
+.containergeneral.listingbody.top {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 
 .link {
@@ -228,16 +350,16 @@
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
 }
 
 .listing {
@@ -252,6 +374,13 @@
   -ms-flex: 0 33%;
   flex: 0 33%;
   text-align: left;
+  text-decoration: none;
+}
+
+.listing.single {
+  -webkit-flex-basis: 75%;
+  -ms-flex-preferred-size: 75%;
+  flex-basis: 75%;
 }
 
 .image {
@@ -265,8 +394,12 @@
   font-weight: 700;
 }
 
+.h4.shrinking {
+  margin-top: 0px;
+}
+
 .formmenu {
-  padding-left: 24px;
+  padding-left: 16px;
   float: right;
 }
 
@@ -286,6 +419,109 @@
   margin-bottom: 16px;
 }
 
+.listingcontainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.bookingformdiv {
+  display: block;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+  -webkit-transform: translate(0px, -64px);
+  -ms-transform: translate(0px, -64px);
+  transform: translate(0px, -64px);
+}
+
+.bookingformprice {
+  height: 64px;
+  padding-top: 16px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: rgba(49, 47, 47, .9);
+}
+
+.requestscontainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.rowwithtwocolumns {
+  margin-bottom: 40px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.ulmedium {
+  padding-top: 0px;
+  padding-bottom: 24px;
+  padding-left: 0px;
+  list-style-type: none;
+}
+
+.limedium {
+  margin-bottom: 16px;
+  padding-top: 16px;
+}
+
+.previewmedium {
+  max-width: 120px;
+  float: left;
+}
+
+.text-block {
+  float: left;
+}
+
+.descriptioncontainermedium {
+  max-width: 300px;
+  padding-left: 16px;
+  float: left;
+  text-align: left;
+}
+
+.datetime {
+  color: #969696;
+  font-weight: 400;
+}
+
+.column {
+  text-align: left;
+}
+
+.column-2 {
+  text-align: left;
+}
+
+.userpicmedium {
+  width: 64px;
+  height: 64px;
+  margin-top: 0px;
+  float: left;
+  border: 3px solid #109e71;
+  border-radius: 80px;
+  -webkit-transform: translate(0px, -8px);
+  -ms-transform: translate(0px, -8px);
+  transform: translate(0px, -8px);
+}
+
+.formblocksmall {
+  margin-bottom: 8px;
+}
+
 @media (max-width: 991px) {
   .section {
     padding-right: 16px;
@@ -295,10 +531,23 @@
     padding-right: 16px;
     padding-left: 16px;
   }
+  .textfield.inline {
+    max-width: 275px;
+  }
   .listing {
     -webkit-flex-basis: 50%;
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
+  }
+  .limedium {
+    border-top: 1px solid #000;
+  }
+  .descriptioncontainermedium {
+    max-width: 225px;
+  }
+  .formblocksmall {
+    padding-left: 8px;
+    float: right;
   }
 }
 
@@ -328,17 +577,61 @@
     background-color: #109e71;
     color: #d8d8d8;
   }
+  .button.inline {
+    float: none;
+  }
+  .textfield.inline {
+    max-width: 360px;
+    margin-bottom: 24px;
+    float: none;
+  }
   .navmenu {
     width: 100%;
     padding-top: 16px;
     padding-bottom: 16px;
     background-color: #109e71;
   }
+  .listing {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
   .formmenu {
     margin-bottom: 0px;
     padding-left: 0px;
     float: none;
     text-align: center;
+  }
+  .listingcontainer {
+    display: inline-block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  .bookingformdiv {
+    margin-top: 0px;
+    -webkit-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+  }
+  .forminline {
+    display: inline-block;
+  }
+  .limedium {
+    border-top: 1px solid #dbdbdb;
+  }
+  .formblocksmall {
+    float: right;
   }
 }
 
@@ -356,6 +649,13 @@
   }
   .formblock {
     width: 100%;
+  }
+  .textfield.inline {
+    display: inline-block;
+    width: 100%;
+    max-width: 600px;
+    min-width: 100px;
+    margin-right: 0px;
   }
   .navmenu {
     background-color: #109e71;
@@ -416,6 +716,30 @@
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
+  }
+  .h4.shrinking {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .listingcontainer {
+    display: inline-block;
+    text-align: center;
+  }
+  .form-block {
+    display: inline-block;
+    width: 100%;
+  }
+  .limedium {
+    border-top: 1px solid #dbdbdb;
+  }
+  .previewmedium {
+    max-width: 60px;
+  }
+  .descriptioncontainermedium {
+    max-width: 202px;
+  }
+  .formblocksmall {
+    float: left;
   }
 }
 

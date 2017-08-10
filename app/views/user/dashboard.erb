@@ -1,16 +1,83 @@
-<% @listings = @current_user.listings.all %>
+  <div class="section">
+    <div class="containergeneral w-container">
 
-<ul id="my_requests">
-  <% @listings.each do |listing| %>
-    <% listing.bookings.all.each do |booking| %>
-      <% guest_name = booking.user.first_name %>
-      <% start_date = booking.start_date %>
-      <% end_date = booking.end_date %>
-      <% booking_title = booking.listing.title %>
-      <li>
-        <%= guest_name %><br />
-        <%= start_date %>–<%= end_date %>, <%= booking_title %>
-      </li>
-    <% end %>
-  <% end %>
-</ul>
+
+      <!-- START INTEGRATION -->
+      <% @my_listings = @current_user.listings.all %>
+      <div class="h1"><%= @current_user.first_name %>'s dashboard</div>
+      <!-- END INTEGRATION -->
+
+
+      <div class="rowwithtwocolumns w-row">
+        <div class="column w-col w-col-6 w-col-stack">
+          <div class="h3">Bookings</div>
+          <ul class="ulmedium" id="my_bookings">
+
+
+            <!-- START INTEGRATION -->
+            <% @current_user.bookings.each do |booking| %>
+            <li class="limedium w-clearfix"><img class="previewmedium" src="images/5c81cbc6-d712-4087-8d4a-2e5cbb1f1f11.jpg">
+              <div class="descriptioncontainermedium">
+                <div class="h4 shrinking"><span class="datetime"><%= booking.start_date %>-<%= booking.end_date %><br xmlns="http://www.w3.org/1999/xhtml"></span><%= booking.listing.title %></div>
+                <% if booking.confirmed %>
+                  <div class="bodycopy green status">Confirmed</div>
+                <% else%>
+                  <div class="bodycopy grey status">Request sent...</div>
+                <% end %>
+              </div>
+            </li>
+            <% end %>
+            <!-- END INTEGRATION -->
+
+
+          </ul>
+        </div>
+        <div class="column-2 w-col w-col-6 w-col-stack">
+          <div class="h3">Requests</div>
+          <ul class="ulmedium" id="my_requests">
+
+
+            <!-- START INTEGRATION -->
+            <% @my_listings.each do |listing| %>
+              <% listing.bookings.all.each do |booking| %>
+                <% guest_name = booking.user.first_name %>
+                <% start_date = booking.start_date %>
+                <% end_date = booking.end_date %>
+                <% booking_title = booking.listing.title %>
+            <li class="limedium w-clearfix"><img class="userpicmedium" src="images/Screen-Shot-2017-08-10-at-12.40.02.png">
+              <div class="descriptioncontainermedium">
+                <div class="h4 shrinking"><%= guest_name %><br><span class="datetime"><%= start_date %>-<%= end_date %><br />
+                <%= booking_title %></span></div>
+              </div>
+              <div class="formblocksmall w-form">
+                <form data-name="Request approval" id="wf-form-Request-approval" method="post" name="wf-form-Request-approval"><input class="button smallform w-button" data-wait="Please wait..." type="submit" value="Approve"><input class="button grey smallform w-button" data-wait="Please wait..." type="submit" value="Reject"></form>
+              </div>
+            </li>
+            <% end %>
+          <% end %>
+          <!-- END INTEGRATION -->
+
+
+          </ul>
+        </div>
+      </div>
+      <div class="h2">My listings</div>
+      <div class="listings">
+
+
+        <!-- START INTEGRATION -->
+        <% @my_listings.each do |listing| %>
+        <a class="listing w-inline-block" href="listing-page.html">
+          <div>
+            <div class="listingpicture"><img class="image" src="images/5c81cbc6-d712-4087-8d4a-2e5cbb1f1f11.jpg"></div>
+            <div class="h4">£<%= listing.price_per_night %> <%= listing.title %></div>
+            <div class="bodycopy caption"><%= listing.description %></div>
+          </div>
+        </a>
+        <% end %>
+        <!-- END INTEGRATION -->
+
+
+      </div>
+    </div>
+  </div>
