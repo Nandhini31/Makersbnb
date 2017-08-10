@@ -2,7 +2,6 @@ def create_listing
   visit('/listings/new')
   fill_in 'title', with: 'Lovely place No.1'
   fill_in 'description', with: 'Nice and charming place to stay'
-  # fill_in 'address', with: 'No 4, london street'
   fill_in 'price', with: 50
   click_button 'Submit listing'
 end
@@ -24,11 +23,11 @@ def log_in(email: 'user@yahoo.com', password: 'password')
   click_button('Log in')
 end
 
-# def request_booking
-#   create_listing
-#   visit('/listings')
-#   click_on('Lovely place No.1')
-#   fill_in('start date', with: '12/01/2018')
-#   fill_in('end date', with: '15/01/2018')
-#   click_button('Request booking')
-# end
+def request_booking
+  click_on('Lovely place No.1')
+  # fill_in('start date', with: '08/07/2017')
+  # fill_in('end date', with: '11/07/2017')
+  page.execute_script("$('#datepicker').datepicker('setDate','08/07/2017')")
+  page.execute_script("$('#datepicker2').datepicker('setDate','11/07/2017')")
+  click_button('Request booking')
+end

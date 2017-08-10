@@ -49,6 +49,15 @@ class Makersbnb < Sinatra::Base
     erb(:booking)
   end
 
+  post '/booking/new' do
+    p params
+    @booking = Booking.new(start_date: params[:start_date], end_date: params[:end_date], confirmed: false)
+    @booking.user = current_user
+    @booking.listing = @listing
+    @booking.save
+    p @booking
+  end
+
 
 
   delete '/logout' do

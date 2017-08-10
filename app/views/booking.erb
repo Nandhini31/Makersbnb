@@ -1,6 +1,9 @@
 <html>
 <head>
   <title>Bookings</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <body>
   <br></br>
@@ -12,9 +15,20 @@
   <p><%= @listing.price_per_night %></p>
   <p><%= @listing.user.email %></p>
   <form method = 'post' action = '/booking/new'>
-    <input name="start date" type="date" placeholder = "start date">
-    <input name="end date" type="date"placeholder = "end date">
+     <input id="datepicker" type="text" name="start date" placeholder = "start date">
+     <input id="datepicker2" type="text" name="end date" placeholder = "end date" >
+
+
     <input type = "submit" value = "Request booking">
   </form>
+
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+    $( "#datepicker2" ).datepicker();
+
+  } );
+
+  </script>
 </body>
 </html>

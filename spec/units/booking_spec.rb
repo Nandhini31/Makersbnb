@@ -4,7 +4,7 @@ describe 'Booking' do
     @listing = Listing.create(title: 'Buckingham Palace', description: 'Stay like the Queen', price_per_night: 9.99)
     @listing.user = @user
     @listing.save
-    @booking = Booking.create(confirmed: false)
+    @booking = Booking.create(start_date:"08/07/2017", end_date:"11/07/2017" , confirmed: false)
     @booking.user = @user
     @booking.listing = @listing
     @booking.save
