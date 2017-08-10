@@ -8,6 +8,6 @@ feature 'Bookings' do
 
   scenario 'Create booking' do
     expect{ request_booking }.to change(Booking, :count).by(1)
-    # expect(page).to have_content('Request sent to the host')
+    expect(page).to have_content('Request sent to the host')
   end
 end

@@ -16,6 +16,10 @@ class Makersbnb < Sinatra::Base
     def current_user
       @current_user ||= User.get(session[:user_id])
     end
+
+    def current_listing
+      @current_listing ||= Listing.get(session[:listing_id])
+    end
   end
 
   get '/sign_up' do
@@ -46,20 +50,24 @@ class Makersbnb < Sinatra::Base
 
   get '/listing/:id' do
     @listing = Listing.first(id: params[:id])
+    session[:listing_id] = @listing.id
     erb(:booking)
   end
 
   post '/booking/new' do
-    p params
     @booking = Booking.new(start_date: params[:start_date], end_date: params[:end_date], confirmed: false)
-    @booking.user = current_user
-    @booking.listing = @listing
-    @booking.save
-    p @booking
-    p @booking.start_date
+    if @booking
+      @booking.user = current_user
+      @booking.listing = current_listing
+      @booking.save
+      flash.keep[:notice] = "Request sent to the host"
+      redirect('/dashboard')
+    end
   end
 
+  get '/dashboard' do
 
+  end
 
   delete '/logout' do
     session[:user_id] = nil
