@@ -46,12 +46,9 @@ class Makersbnb < Sinatra::Base
 
   get '/listing/:id' do
     @listing = Listing.first(id: params[:id])
-    p @listing.description
-    p @listing.title
-    p @listing.price_per_night
-
     erb(:booking)
   end
+
 
 
   delete '/logout' do
