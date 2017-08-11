@@ -69,6 +69,13 @@ class Makersbnb < Sinatra::Base
     end
   end
 
+  post '/booking/update' do
+    @booking = Booking.get(params[:booking_id])
+    @booking.confirmed = params[:confirmed]
+    @booking.save
+    redirect '/dashboard'
+  end
+
   get '/dashboard' do
     @current_user = current_user
     erb :'user/dashboard'
@@ -79,7 +86,6 @@ class Makersbnb < Sinatra::Base
     flash.keep[:notice] = 'Goodbye!'
     redirect '/log_in'
   end
-
 
   run! if app_file == $0
 end

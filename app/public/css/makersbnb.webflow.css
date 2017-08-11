@@ -475,6 +475,7 @@ a {
 .limedium {
   margin-bottom: 16px;
   padding-top: 16px;
+  text-align: right;
 }
 
 .previewmedium {
@@ -517,6 +518,7 @@ a {
 }
 
 .formblocksmall {
+  display: inline-block;
   margin-bottom: 8px;
 }
 
@@ -524,6 +526,9 @@ a {
   .section {
     padding-right: 16px;
     padding-left: 16px;
+  }
+  .button.smallform {
+    margin-left: 0px;
   }
   .footer {
     padding-right: 16px;
@@ -545,7 +550,6 @@ a {
   }
   .formblocksmall {
     padding-left: 8px;
-    float: right;
   }
 }
 
@@ -627,9 +631,6 @@ a {
   }
   .limedium {
     border-top: 1px solid #dbdbdb;
-  }
-  .formblocksmall {
-    float: right;
   }
 }
 
@@ -737,6 +738,7 @@ a {
     max-width: 202px;
   }
   .formblocksmall {
+    padding-left: 16px;
     float: left;
   }
 }

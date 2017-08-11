@@ -24,6 +24,8 @@
                 <div class="h4 shrinking"><span class="datetime"><%= booking.start_date %>-<%= booking.end_date %><br xmlns="http://www.w3.org/1999/xhtml"></span><%= booking.listing.title %></div>
                 <% if booking.confirmed %>
                   <div class="bodycopy green status">Confirmed</div>
+                <% elsif booking.confirmed == nil %>
+                  <div class="bodycopy red status">Rejected</div>
                 <% else%>
                   <div class="bodycopy grey status">Request sent...</div>
                 <% end %>
@@ -42,7 +44,7 @@
 
             <!-- START INTEGRATION -->
             <% @my_listings.each do |listing| %>
-              <% listing.bookings.all.each do |booking| %>
+              <% listing.bookings.all(:confirmed => false).each do |booking| %>
                 <% guest_name = booking.user.first_name %>
                 <% start_date = booking.start_date %>
                 <% end_date = booking.end_date %>
@@ -53,7 +55,27 @@
                 <%= booking_title %></span></div>
               </div>
               <div class="formblocksmall w-form">
-                <form data-name="Request approval" id="wf-form-Request-approval" method="post" name="wf-form-Request-approval"><input class="button smallform w-button" data-wait="Please wait..." type="submit" value="Approve"><input class="button grey smallform w-button" data-wait="Please wait..." type="submit" value="Reject"></form>
+
+                <!-- APPROVAL FORM STARTS -->
+                <div class="formblocksmall w-form">
+                  <form action="/booking/update" class="w-clearfix" id="wf-form-Request-rejection" method="post" name="wf-form-Request-rejection">
+                    <input type="hidden" name="booking_id" value="<%= booking.id %>">
+                    <!-- <input type="hidden" name="confirmed" value=""> -->
+                    <input class="button grey smallform w-button" type="submit" value="Reject">
+                  </form>
+                </div>
+                <!-- APPROVAL FORM ENDS -->
+
+                <!-- REJECTION FORM STARTS -->
+                <div class="formblocksmall w-form">
+                  <form action="/booking/update" class="w-clearfix" id="wf-form-Request-approval" method="post" name="wf-form-Request-approval">
+                    <input type="hidden" name="booking_id" value="<%= booking.id %>">
+                    <input type="hidden" name="confirmed" value="true">
+                    <input class="button smallform w-button" type="submit" value="Approve">
+                  </form>
+                </div>
+                <!-- REJECTION FORM ENDS -->
+
               </div>
             </li>
             <% end %>
