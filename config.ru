@@ -1,3 +1,3 @@
-require './app/app'
+require './app/app.rb'
 
 run Makersbnb
