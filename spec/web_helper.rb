@@ -67,3 +67,13 @@ def log_in_as_a_guest(email: 'guest@yahoo.com', password: '42')
   fill_in('password', with: password)
   click_button('Log in')
 end
+
+def approve_booking
+  visit('/dashboard')
+  click_button('Approve')
+end
+
+def reject_booking
+  visit('/dashboard')
+  click_button('Reject')
+end
