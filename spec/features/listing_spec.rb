@@ -9,8 +9,6 @@ feature 'Listings' do
     visit('/listings')
     within 'div#listings' do
       expect(page).to have_content('Nice and charming place to stay')
-      # expect(page).to have_content('No 4, london street')
-      # expect(page).to have_content(50)
     end
   end
 
