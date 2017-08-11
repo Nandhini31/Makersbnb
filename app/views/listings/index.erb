@@ -1,19 +1,26 @@
-<html>
-<head>
-  <title>Listings</title>
-</head>
-<body>
+  <div class="section">
+    <div class="containergeneral w-container">
+      <div class="bodycopy">Hello <%= current_user.first_name %>, we ♡ you!</div>
+      <div class="h1">Book a workplace</div>
+      <div class="form-block w-form">
+        <form class="forminline w-clearfix" data-name="Email Form" id="email-form" name="email-form"><input class="inline textfield w-input" data-name="startDate" id="startDate" maxlength="256" name="startDate" placeholder="Start date" required="required" type="text"><input class="inline textfield w-input" data-name="endDate" id="endDate" maxlength="256" name="endDate" placeholder="End date" required="required" type="text"><input class="button inline w-button" data-wait="Please wait..." type="submit" value="Show listings"></form>
+      </div>
+      <div class="listings" id="listings">
 
-<ul id="listings">
-  <% @listings.each do |listing| %>
-  <li>
-  <p><%= listing.title %></p>
-  <p><%= listing.description %></p>
-  <p><%= listing.price_per_night %></p>
-  <p><%= listing.user.email %></p>
-  </li>
-  <% end %>
-</ul>
 
-</body>
-</html>
+        <!-- INTEGRATION STARTS -->
+        <% @listings.each do |listing| %>
+        <a class="listing w-inline-block" href="/listing/<%= listing.id %>">
+          <div>
+            <div class="listingpicture"><img class="image" src="images/places/medium/<%= listing.id %>.jpg"></div>
+            <div class="h4">£<%= listing.price_per_night %> <%= listing.title %></div>
+            <div class="bodycopy caption"><%= listing.description %></div>
+          </div>
+        </a>
+        <% end %>
+        <!-- INTEGRATION ENDS -->
+
+
+      </div>
+    </div>
+  </div>

@@ -1,6 +1,8 @@
 class Listing
   include DataMapper::Resource
 
+  has n, :bookings 
+
   property :id, Serial
   property :title, String
   property :description, Text

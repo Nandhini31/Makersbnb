@@ -9,13 +9,21 @@ class Makersbnb < Sinatra::Base
   use Rack::MethodOverride
 
   enable :sessions
-  set :session_secret, 'super secret'
+  set :session_secret, rand.to_s
   register Sinatra::Flash
 
   helpers do
     def current_user
       @current_user ||= User.get(session[:user_id])
     end
+
+    def current_listing
+      @current_listing ||= Listing.get(session[:listing_id])
+    end
+  end
+
+  get '/' do
+    if current_user then redirect '/listings' else redirect '/sign_up' end
   end
 
   get '/sign_up' do
@@ -44,9 +52,31 @@ class Makersbnb < Sinatra::Base
     end
   end
 
+  get '/listing/:id' do
+    @listing = Listing.first(id: params[:id])
+    session[:listing_id] = @listing.id
+    erb :'/listings/listing_page'
+  end
+
+  post '/booking/new' do
+    @booking = Booking.new(start_date: params[:start_date], end_date: params[:end_date], confirmed: false)
+    if @booking
+      @booking.user = current_user
+      @booking.listing = current_listing
+      @booking.save
+      flash.keep[:notice] = "Request sent to the host"
+      redirect('/dashboard')
+    end
+  end
+
+  get '/dashboard' do
+    @current_user = current_user
+    erb :'user/dashboard'
+  end
+
   delete '/logout' do
     session[:user_id] = nil
-    flash.keep[:notice] = 'goodbye!'
+    flash.keep[:notice] = 'Goodbye!'
     redirect '/log_in'
   end
 

@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>Listings</title>
+</head>
+<body>
+  <br></br>
+  <br></br>
+  <br></br>
+  <br></br>
+<ul id="listings">
+  <% @listings.each do |listing| %>
+  <li>
+  <a href='/listing/<%= listing.id %>'>
+  <p><%= listing.title %></p></a>
+  <p><%= listing.description %></p>
+  <p><%= listing.price_per_night %></p>
+  <p><%= listing.user.email %></p>
+  </li>
+  <% end %>
+</ul>
+
+</body>
+</html>
