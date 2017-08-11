@@ -1,7 +1,6 @@
 source "https://rubygems.org"
 ruby '2.4.0'
 
-group :development do
   gem 'bcrypt'
   gem 'data_mapper'
   gem 'dm-migrations'
@@ -11,7 +10,6 @@ group :development do
   gem 'sinatra'
   gem 'sinatra-flash'
   # gem 'sinatra-partial'
-end
 
 group :test do
   gem 'capybara'
