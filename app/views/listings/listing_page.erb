@@ -12,7 +12,7 @@
             <div class="h3 inline white">£<%= @listing.price_per_night %> <span class="bodycopy">per night</span></div>
           </div>
           <div class="formblock nomargins w-form">
-            <form action="/booking/new" id="wf-form-Booking-form" method="post" name="wf-form-Booking-form">
+            <form action="/booking/new" method="post" name="booking_form">
               <input class="textfield w-input" id="startDate" maxlength="256" name="startDate" placeholder="Start date" type="text">
               <input class="textfield w-input" id="endDate" maxlength="256" name="endDate" placeholder="End date" required="required" type="text">
               <input class="button w-button" type="submit" value="Request booking">
