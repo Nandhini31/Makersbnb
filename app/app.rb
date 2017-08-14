@@ -53,12 +53,14 @@ class Makersbnb < Sinatra::Base
   end
 
   get '/listing/:id' do
+    redirect_to_signup_if_needed
     @listing = Listing.first(id: params[:id])
     session[:listing_id] = @listing.id
     erb :'/listings/listing_page'
   end
 
   post '/booking/new' do
+    redirect_to_signup_if_needed
     @booking = Booking.new(start_date: params[:start_date], end_date: params[:end_date], confirmed: false)
     if @booking
       @booking.user = current_user
@@ -70,6 +72,7 @@ class Makersbnb < Sinatra::Base
   end
 
   post '/booking/update' do
+    redirect_to_signup_if_needed
     @booking = Booking.get(params[:booking_id])
     @booking.confirmed = params[:confirmed]
     @booking.save
@@ -77,6 +80,7 @@ class Makersbnb < Sinatra::Base
   end
 
   get '/dashboard' do
+    redirect_to_signup_if_needed
     @current_user = current_user
     erb :'user/dashboard'
   end
@@ -85,6 +89,10 @@ class Makersbnb < Sinatra::Base
     session[:user_id] = nil
     flash.keep[:notice] = 'Goodbye!'
     redirect '/log_in'
+  end
+
+  def redirect_to_signup_if_needed
+    if !current_user then redirect '/sign_up' end
   end
 
   run! if app_file == $0
