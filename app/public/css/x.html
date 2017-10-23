@@ -1,0 +1,31 @@
+
+<!-- saved from url=(0071)file:///Users/oleglukyanov/Dropbox/Projects/notes-js/index.html#notes/0 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Notes</title>
+  </head>
+
+  <body>
+    <h1>Here are some notes</h1>
+
+    <div id="app"><ul><li><a href="file:///Users/oleglukyanov/Dropbox/Projects/notes-js/index.html#notes/0">hi</a></li></ul></div>
+    <div id="noteText"><div>hi</div></div>
+  <br>
+
+    <form id="newNoteForm" method="post" action="file:///Users/oleglukyanov/Dropbox/Projects/notes-js/index.html#note">
+      <textarea id="textarea" rows="4" cols="50"></textarea><br>
+      <input type="submit" value="add">
+    </form>
+    <script src="./x_files/web-helper.js"></script>
+    <script src="./x_files/note-model.js"></script>
+    <script src="./x_files/note-list-model.js"></script>
+    <script src="./x_files/note-list-view.js"></script>
+    <script src="./x_files/single-note-view.js"></script>
+    <script src="./x_files/note-controller.js"></script>
+    <script>
+      NoteController = new NoteController(new NoteList());
+      setEventListenersFor(NoteController);
+    </script>
+  
+
+</body></html>
